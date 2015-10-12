@@ -1,0 +1,11 @@
+<ion-view view-title="Utmaningar">
+  <ion-content>
+    <h1>Utmaningar</h1>
+    <button class="button button-block icon-left ion-plus-circled button-positive" ng-click="newChallenge()">Ny utmaning</button>
+    <ion-list>
+      <ion-item ng-repeat="challenge in challenges" href="#/app/challenges/{{challenge.id}}">
+        {{challenge.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

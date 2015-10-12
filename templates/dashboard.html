@@ -1,0 +1,53 @@
+<ion-view view-title="Start" class="bar-energized">
+  <ion-content class="padding scroll-bg">
+    
+
+ 	<!-- <div class="list card">
+ 	  <a href="#" ng-click="registerActivity()" class="item item-icon-left">
+ 	    <i class="icon ion-android-bicycle"></i>
+ 	    Transport
+ 	  </a>
+
+ 	  <a href="#" class="item item-icon-left">
+ 	    <i class="icon ion-fork"></i>
+ 	    Mat
+ 	  </a>
+
+ 	  <a href="#" class="item item-icon-left">
+ 	    <i class="icon ion-loop"></i>
+ 	    Återvinning
+ 	  </a>
+
+ 	  <a href="#" class="item item-icon-left">
+ 	    <i class="icon ion-tshirt"></i>
+ 	    Kläder
+ 	  </a>
+ 	</div> -->
+
+
+ 	<ion-list>
+    	<ion-item ng-repeat="activity in activityList" ng-click="openActivityModal(activity)" class="icon ion-android-bicycle">
+    		{{activity.title}}
+  		</ion-item>
+	</ion-list>
+
+
+	<br>
+    <div class="card">
+	  	<div class="item item-divider">
+	    	Mina senaste aktiviteter
+	  	</div>
+	  
+	  	<div ng-repeat="user in users">
+	  		<li>{{user}}</li>
+	  	</div>
+
+	    <div class="item item-divider">
+	  		<h4>Dina aktiviterer har hittills sparat 2,3 ton co2<h4>
+	    </div>
+	</div> 
+
+	<button class="button button-block icon-left ion-plus-circled button-positive" ng-click="newChallenge()">Ny utmaning</button>
+
+  </ion-content>
+</ion-view>

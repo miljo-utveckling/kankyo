@@ -1,0 +1,63 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title"> Ny utmaning</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeNewChallenge()">Stäng</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <!-- <div class="card">
+      <div class="item item-divider">
+        <div>
+          Antal: {{activityAmount}}
+        </div>
+        <div>
+          Mitt mål: {{activityGoal}} per {{activityTimeUnit}}
+        </div>
+      </div>
+    </div> -->
+    <div class="list">
+
+      <label class="item item-input item-select">
+          <div class="input-label">
+              Utmaning
+          </div>
+          <select ng-model="chType">
+              <option value="">-- välj --</option>
+              <option>Cykla</option>
+              <option selected>Gå</option>
+              <option>Buss</option>
+              <option>Tåg</option>
+          </select>
+      </label>
+
+
+      <label class="item item-input item-select">
+          <div class="input-label">
+              Dina sträckor
+          </div>
+          <select ng-model="rutt" ng-options="route.name for route in routes" ng-change="setResults(rutt)">
+              <option value="">-- välj --</option>
+          </select>
+      </label>
+
+      <label class="item item-input item-select">
+          <div class="input-label">
+              Målsättning
+          </div>
+          <select ng-model="goal">
+              <option value="">-- välj --</option>
+              <option>1 gång / vecka</option>
+              <option selected> 2 gånger / vecka</option>
+              <option>3 gånger / vecka</option>
+              <option>4 gånger / vecka</option>
+              <option>5 gånger / vecka</option>
+              <option>6 gånger / vecka</option>
+              <option>7 gånger / vecka</option>
+              <option>8 gånger / vecka</option>
+          </select>
+      </label>
+  </div>
+    <button class="button button-block icon-left ion-plus-circled button-positive" ng-click="saveChallenge(chType, goal)">Spara</button>
+  </ion-content>
+</ion-modal-view>

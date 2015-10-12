@@ -1,0 +1,30 @@
+<ion-view view-title="Karta">
+
+	<!-- <ion-nav-buttons side="right">
+		<button ng-click="locate();" class="button button-icon icon ion-pinpoint"></button>
+	</ion-nav-buttons>
+
+	<ion-nav-buttons side="secondary">
+      <button class="button" ng-click="calcCo2FromDistance();">
+        Beräkna sträckan
+      </button>
+     </ion-nav-buttons>
+ -->
+     
+  	<ion-content overflow-scroll="true">
+        <leaflet layers="layers" center="osloCenter" markers="markers" data-tap-disabled="true"></leaflet>
+        <div id="button-wrapper">
+            <button ng-click="locate();" class="button icon ion-pinpoint" style="margin-left: 50px;"></button>
+            <button class="button icon ion-arrow-graph-up-right" ng-click="calcCo2FromDistance();">
+		        
+		    </button>
+            <button class="button" ng-click="loadRoutes();">
+        		Load
+      		</button>
+      		<button class="button" ng-click="clearRoutes();">
+        		Clr
+      		</button>
+        </div> 
+    </ion-content>
+</ion-view>
+
