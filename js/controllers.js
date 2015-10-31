@@ -75,7 +75,7 @@ angular.module('starter.controllers', [])
       $scope.activityTitle = activity.title;
       $scope.activityId = activity.id;
       $scope.activityCategory = activity.category;
-      $scope.activityAmount = activity.amount;
+      $scope.activityAmount = activity.counter;
       $scope.activityGoal = activity.goal;
       $scope.activityPeriod = 7; //activity.period;
       $scope.activityTimeUnit = 'vecka'; //activity.timeUnit;

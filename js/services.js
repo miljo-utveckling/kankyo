@@ -33,8 +33,8 @@ angular.module('starter.services', [])
 			// ];
 		},
 		registerUserAction : function(activity){
-			console.log('in service: registerUserAction');
-			return $http.get(url + '/user/check?user=johan&cid=' + activity.id);
+			console.log('in service: registerUserAction, activity.id is ' + activity.id);
+			return $http.get(url + '/challenge/done/johan/' + activity.id);
 		}
 	}
 })
