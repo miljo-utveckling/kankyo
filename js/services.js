@@ -7,7 +7,7 @@ angular.module('starter.services', [])
 		},
 		getAllActivities : function(){
 
-			return $http.get(url + '/user/getactivities?id=johan');
+			return $http.get(url + '/challenge/johan');
 
 			// return [
 			// 	{
