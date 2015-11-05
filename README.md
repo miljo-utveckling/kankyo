@@ -7,3 +7,5 @@ Kankyo Web App
     ionic platform add android
     ionic serve
 
+******
+
