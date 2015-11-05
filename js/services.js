@@ -1,6 +1,6 @@
 angular.module('starter.services', [])
 .factory('User', function($http){
-	var url = 'https://aqueous-caverns-6086.herokuapp.com';
+	var url = 'https://powerful-reaches-2824.herokuapp.com';
 	return {
 		getAllUsers : function(){
 			return $http.get(url + '/user/getallusers');
