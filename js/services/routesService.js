@@ -1,5 +1,5 @@
 angular.module('starter').factory('RoutesService', ['$http', function($http) {
-	var url = 'https://aqueous-caverns-6086.heroku.com';
+	var url = 'https://aqueous-caverns-6086.herokuapp.com';
 	var traffikLabApi = 'http://api.commutegreener.com/api/co2/emissions?';
 	var RoutesService = {
 		userLocations: {
