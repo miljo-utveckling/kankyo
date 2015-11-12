@@ -108,6 +108,15 @@ angular.module('starter').controller('MapsCtrl',
     $scope.savePath = function(name){
         console.log(RoutesService.getNumOfMarkers());
         RoutesService.saveRoutes(name, $scope.newDistance, $scope.newEmission);
+
+        RoutesService.persistRoutes({test:1})
+	    .success(function(route){
+	        console.log('persistRoutes, success: ', route);
+	    })
+	    .error(function(error){
+	        console.log(error);
+	    });
+
         RoutesService.resetSavedMarkers();
         $scope.pathModal.hide();
     };

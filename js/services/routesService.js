@@ -56,7 +56,9 @@ angular.module('starter').factory('RoutesService', ['$http', function($http) {
 				emissions: em,
 				markers: tmpMarkers
 			});
-		}
+		},
+		persistRoutes: function(data){
+		    	return $http.post(url + '/route/johan', data);
 	};
 
   	return RoutesService;

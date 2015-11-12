@@ -1,5 +1,5 @@
 angular.module('starter').factory('ChallengesService', ['$http', function($http) {
-	var url = 'https://powerful-reaches-2824.herokuapp.com';
+	var url = 'http://localhost:8080';
 	var ChallengesService = {
 		challenges: [
 			// {
