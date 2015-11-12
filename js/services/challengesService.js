@@ -1,5 +1,5 @@
 angular.module('starter').factory('ChallengesService', ['$http', function($http) {
-	var url = 'http://localhost:8080';
+	var url = 'https://aqueous-caverns-6086.heroku.com';
 	var ChallengesService = {
 		challenges: [
 			// {
